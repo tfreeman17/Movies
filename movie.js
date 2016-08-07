@@ -9,7 +9,8 @@ function separate(string){
 	return arr;
 	// console.log(arr);
 }
-function countMonth(arr){// counts all the months and returns them in object
+function countMonth(arr){
+// counts all the months and returns them in object
 	var count = [];
 	for(var i = 0; i < arr.length; i++){
 		if(count[arr[i][1]] === undefined){
@@ -19,7 +20,8 @@ function countMonth(arr){// counts all the months and returns them in object
 	}
 	return count;
 }
-function countUser(arr){ // counts all the users and returns them in object
+function countUser(arr){ 
+// counts all the users and returns them in object
 	var count = [];
 	for(var i = 0; i < arr.length; i++){
 		if(count[arr[i][0]] === undefined){
@@ -29,7 +31,8 @@ function countUser(arr){ // counts all the users and returns them in object
 	}
 	return count;
 }
-function countMov(arr){ // counts all the users and returns them in object
+function countMov(arr){ 
+// counts all the users and returns them in object
 	var count = [];
 	for(var i = 0; i < arr.length; i++){
 		if(count[arr[i][2]] === undefined){
@@ -39,7 +42,8 @@ function countMov(arr){ // counts all the users and returns them in object
 	}
 	return count;
 }
-function findWinner(arr){ // determines the highest counted in the objects.
+function findWinner(arr){ 
+// determines the highest counted in the objects.
 	var counts = 0;
 	var winner = 0;
 	for (var key in arr){
@@ -55,7 +59,7 @@ function findWinner(arr){ // determines the highest counted in the objects.
 	}
 	return winner;
 }
-//allows me to take the string respose and manipulate it in functions
+//takes the string respose and manipulate it in functions
 function analyze(res) {  
 	var arrays = separate(res);
 	var winningMonth = findWinner(countMonth(arrays));
